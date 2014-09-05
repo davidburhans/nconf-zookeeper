@@ -1,0 +1,23 @@
+{
+  "name": "nconf-zookeeper",
+  "version": "0.0.1",
+  "description": "NConf storage engine for ZooKeeper",
+  "main": "lib/zookeeper.js",
+  "scripts": {
+    "test": "node test/zookeeper.js"
+  },
+  "keywords": [
+    "nconf",
+    "zookeeper"
+  ],
+  "author": "david.burhans@corvisa.com",
+  "license": "ISC",
+  "dependencies": {
+    "node-zookeeper-client": "^0.2.1"
+  },
+  "devDependencies": {
+    "debug": "^2.0.0",
+    "nconf": "^0.6.9",
+    "tape": "^2.14.0"
+  }
+}
