@@ -11,7 +11,7 @@
     "zookeeper"
   ],
   "author": "david.burhans@corvisa.com",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "node-zookeeper-client": "^0.2.1"
   },
