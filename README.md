@@ -6,7 +6,7 @@ nconf storage engine for ZooKeeper
 Usage
 =====
 
-```
+```js
 // example.js
 
 var nconf = require('nconf');
