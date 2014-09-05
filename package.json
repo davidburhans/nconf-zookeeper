@@ -1,7 +1,7 @@
 {
   "name": "nconf-zookeeper",
   "version": "0.1.1",
-  "description": "NConf storage engine for ZooKeeper",
+  "description": "nconf storage engine for ZooKeeper",
   "main": "lib/zookeeper.js",
   "scripts": {
     "test": "node test/zookeeper.js"
@@ -19,5 +19,9 @@
     "debug": "^2.0.0",
     "nconf": "^0.6.9",
     "tape": "^2.14.0"
+  },
+  "repository": { 
+    "type" : "git",
+    "url" : "http://github.com/davidburhans/nconf-zookeeper.git"
   }
 }
