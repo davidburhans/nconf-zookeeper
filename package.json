@@ -1,6 +1,6 @@
 {
   "name": "nconf-zookeeper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NConf storage engine for ZooKeeper",
   "main": "lib/zookeeper.js",
   "scripts": {
