@@ -10,7 +10,11 @@
     "nconf",
     "zookeeper"
   ],
-  "author": "david.burhans@corvisa.com",
+  "author": { 
+    "name": "David Burhans",
+    "email": "david.burhans@gmail.com",
+    "url": "http://www.corvisacloud.com"
+  },
   "license": "Apache-2.0",
   "dependencies": {
     "node-zookeeper-client": "^0.2.1"
