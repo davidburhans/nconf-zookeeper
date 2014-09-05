@@ -118,3 +118,14 @@ test('nconf will autoUpdate if asked to', function(t) {
 	});
 });
 
+test('onUpdated is called when data is updated', function(t) {
+	zkConfig.autoUpdate = true;
+	t.plan(2) // one for initial load and one for autoUpdate
+	zkConfig.onUpdated = function(event) {
+		t.pass('onUpdate was called');
+	}
+	nconf.use('Zookeeper', zkConfig);
+	nconf.load(function(data) {
+		zkClient.setData('/' + zkConfig.name, new Buffer('{}'), NOOP);
+	});
+});
