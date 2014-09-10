@@ -5,7 +5,7 @@ var nconf = require('nconf'),
 	zkConfig = {
 		host: 'localhost', 
 		port: 49181, 
-		rootPath: '/wallace/test',
+		rootPath: '/test',
 		name: 'nconf-zookeeper-tests'
 	},
 	zkClient = require('node-zookeeper-client').createClient(zkConfig.host + ':' + zkConfig.port + zkConfig.rootPath),
