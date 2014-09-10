@@ -21,11 +21,13 @@ test('creates store on nconf', function(t) {
 
 test('zkClient can connect to ZooKeeper', function(t) {	
 	zkClient.once('connected', function() {
-		t.pass('zkConfig connected');
+		t.pass('zkConfig connected. make sure the path ' + zkConfig.rootPath + ' exists at ' + zkConfig.host + ':' + zkConfig.port );
 		t.end();
 	});
 	zkClient.connect();
 });
+
+
 
 test('callback invoked on load request', function(t) {
 	nconf.use('Zookeeper', zkConfig);
@@ -127,5 +129,11 @@ test('onUpdated is called when data is updated', function(t) {
 	nconf.use('Zookeeper', zkConfig);
 	nconf.load(function(data) {
 		zkClient.setData('/' + zkConfig.name, new Buffer('{}'), NOOP);
+	});
+});
+
+test('clean-up', function(t) {
+	zkClient.remove('/' + zkConfig.name, function(err, stat) {						
+		t.end();
 	});
 });
